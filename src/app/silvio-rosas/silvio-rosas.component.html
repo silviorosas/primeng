@@ -1,0 +1,114 @@
+
+<!--Header 1-->
+<p-table #dt   [rows]="10" [showCurrentPageReport]="true"  >
+	<ng-template pTemplate = "caption"> Nuevo Crédito </ng-template>
+	<ng-template pTemplate="header">
+        
+        
+<tr> 
+    <th>
+        <span>Importe </span>
+<p-multiSelect  defaultLabel="10000" optionLabel="name" class="multiselect-custom">
+<ng-template pTemplate="header">
+    Header Content
+</ng-template>   
+</p-multiSelect>
+    </th> 
+
+
+    <th>
+        <span>Cuotas </span>
+<p-multiSelect  defaultLabel="6" optionLabel="name" class="multiselect-custom">
+<ng-template pTemplate="header">
+    Header Content
+</ng-template>   
+</p-multiSelect>
+    </th> 
+
+
+    <th>
+        <span>Tipo de plan </span>
+<p-multiSelect  defaultLabel="Municipal" optionLabel="name" class="multiselect-custom">
+<ng-template pTemplate="header">
+    Header Content
+</ng-template>   
+</p-multiSelect>
+    </th>
+
+
+    <th>
+        <span>Amortización </span>
+<p-multiSelect  defaultLabel="Frances" optionLabel="name" class="multiselect-custom">
+<ng-template pTemplate="header">
+    Header Content
+</ng-template>   
+</p-multiSelect>
+    </th> 
+
+
+    <th>
+        <button pButton type="button" label="Calcular" ></button>
+    </th> 
+</tr>
+</ng-template>
+</p-table>
+
+
+<!--Header 2 Tabla-->
+<p-table #dt   [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" [paginator]="true" >
+	<ng-template pTemplate="header">
+	
+    <tr>     
+		    <th>N°</th>
+            <th>VENC</th>
+            <th>SALDO</th>
+            <th>CAP</th>
+            <th>INT</th>
+            <th>CA</th>
+            <th>TOTAL</th>
+            <th>IVA</th>
+            <th>T+IVA</th>            						
+	</tr>       
+	</ng-template>
+
+    <!--filas body clientes-->
+	<ng-template pTemplate="body"  >
+
+		<tr class="ui-selectable-row"  >
+
+			<td>
+				<span class="ui-column-title" >1</span>											
+			</td>
+
+
+			<td>
+			    <span style="vertical-align: middle; margin-left: .5em"></span>
+			</td>
+
+            
+			<td>
+				<span style="vertical-align: middle; margin-left: .5em"></span> 
+			</td>
+
+
+			<td>
+				<span style="vertical-align: middle; margin-left: .5em"></span> 
+			</td>
+
+            
+			<td>
+				<span  style="vertical-align: middle; margin-left: .5em"></span> 									</td>
+			<td>
+			<button pButton type="button" class="ui-button-secondary" icon="pi pi-cog"></button>
+			</td>
+            
+		</tr>
+	</ng-template>
+	<ng-template pTemplate="emptymessage">
+		<tr>
+			 <td colspan = "6" style = "text-align: left"> Sin datos temporalmente </td>
+		</tr>
+	</ng-template>
+</p-table>
+
+
